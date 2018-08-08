@@ -12,6 +12,10 @@
   <body>
     <div class="navbar navbar-light bg-light">
       <a class="navbar-brand navbar-left" href='/flats'>MY AIRBNB</a>
+      <%= form_tag(search_flats_path) do %>
+        <%= text_field_tag :name, @term %>
+        <%= submit_tag 'Search', class: 'btn btn-success' %>
+      <% end %>
       <a class="navbar-right btn btn-outline-primary my-2 my-sm-0 ml-2" href="/flats/new">Add Flat</a>
     </div>
     <%= yield %>

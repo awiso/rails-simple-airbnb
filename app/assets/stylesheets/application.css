@@ -30,9 +30,6 @@
 
 .card-banner {
   height: 300px;
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('http://unsplash.it/600/600');
-  background-size: cover;
-  background-repeat: no-repeat;
   /* background-image: url("http://unsplash.it/250/200"); */
   background-position: cover;
 }
