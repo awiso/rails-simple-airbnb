@@ -1,7 +1,37 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+puts 'Clear DB...'
+Flat.destroy_all
+
+puts 'New entries...'
+Flat.create!(
+  name: 'Light & Spacious Garden Flat London',
+  address: '10 Clifton Gardens London W9 1DT',
+  description: 'A lovely summer feel for this spacious garden flat. Two double bedrooms, open plan living area, large kitchen and a beautiful conservatory',
+  price_per_night: 75,
+  number_of_guests: 3
+)
+
+Flat.create!(
+  name: 'Super Nice Apartment',
+  address: '10 Downing Street London, UK',
+  description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A veritatis voluptas enim dantium porro assumenda totam sed. Culpa, soluta veniam.',
+  price_per_night: 700,
+  number_of_guests: 12
+)
+
+Flat.create!(
+  name: 'Nice Loft with View',
+  address: '20 Halford Road SW61JX London, UK',
+  description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. A veritatis voluptas enim audantium porro assumenda totam sed. Culpa, soluta veniam.',
+  price_per_night: 350,
+  number_of_guests: 8
+)
+
+Flat.create!(
+  name: 'A Place called Home',
+  address: '960 Fifth Avenue, New York City, NY 10075',
+  description: 'Lorem ipsumelit. A verficiis architecto nuorem perspiciatis ipsa incidunt nisi labore expedita  laudantium porro assumenda totam sed. Culpa, solu',
+  price_per_night: 25,
+  number_of_guests: 1
+)
+
+puts 'Done'
