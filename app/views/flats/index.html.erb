@@ -1,0 +1,30 @@
+<div class="container">
+  <h1>All our flats (<%= @flats.length %>)</h1>
+
+  <div class="container">
+    <div class="row">
+      <% @flats.each do |flat| %>
+        <div class="col-4">
+          <div class="card bg-light">
+            <div class="card-banner" style="background-size: cover; background-repeat: no-repeat; background-image: url('<%= flat.url %>');">
+              <img>
+            </div>
+            <div class="card-info">
+              <h3><%= flat.name %></h3>
+              <p><%= flat.address %></p>
+              <a>🛌 <%= flat.number_of_guests %> 💲 <%= flat.price_per_night %></a>
+            </div>
+            <div class="card-bottom">
+              <br>
+              <ul class='list-inline text-center'>
+                <%= link_to 'More Info', flat_path(flat), class: 'btn-sm btn-primary' %>
+                <%= link_to 'Edit', edit_flat_path(flat), class: 'btn-sm btn-warning' %>
+                <%= link_to 'Delete', flat_path(flat), method: :delete, class: 'btn-sm btn-danger' %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
